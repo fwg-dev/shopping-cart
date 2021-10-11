@@ -4,6 +4,10 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Products from './components/Products';
 
+//Router
+import {Router, Route, Switch } from 'react-router-dom';
+import Cart from './components/Cart';
+
 
 function App() {
   const [products, setProducts] = useState(["shoes", "teabags", "laptops"])
@@ -11,11 +15,16 @@ function App() {
 
   return (
     <div className="App">
-      <header >
-        Welcome to the shopping cart
-      </header>
-      <Navbar />
-      <Products products={products} />
+    <Navbar />
+    <Switch >
+     <Route exact path ="/cart" >
+       <Cart/>
+     </Route>
+
+    </Switch>
+      
+      {/* <h1>Welcome to the shopping cart</h1> */}
+      {/* <Products products={products} /> */}
     </div>
   );
 }
