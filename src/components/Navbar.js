@@ -5,6 +5,7 @@ import Products from './Products.js';
 
 //imports from material ui 
 import {AppBar, Toolbar, IconButton,  Typography,Button} from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 function Navbar() {
@@ -17,6 +18,7 @@ function Navbar() {
           </Typography>
           <Link to="/Cart"> 
           <Button color="inherit">
+          <ShoppingCartIcon />
            Cart
         </Button>
         </Link>
