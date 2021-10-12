@@ -11,14 +11,24 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 function Navbar() {
   return (
     <div className="navigation"> 
-         <AppBar position="static">
+         <AppBar position="static"
+         style={{ background: '#EE6E73' }}
+         >
         <Toolbar variant="dense">
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          {/* <Link to="/products"> Products</Link> */}
+          <Link 
+          to="/products"> Products</Link>
           </Typography>
           <Link to="/Cart"> 
-          <Button color="inherit">
-          <ShoppingCartIcon />
+          <Button color="inherit" 
+          style={{ background: '#FFFAFA' }}
+          
+          >
+          {/* <ShoppingCartIcon 
+          style={{ background: '#FFFAFA' }}
+
+
+          /> */}
            Cart
         </Button>
         </Link>
