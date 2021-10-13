@@ -8,6 +8,7 @@ function Products({products}) {
 
   const addToCart = () => {
     console.log("Button Clicked");
+    setCartItems(cartItems +1); 
 
   };
 
@@ -41,9 +42,10 @@ function Products({products}) {
                   variant="outlined" 
                   color="success" 
                   size="small"
-                  onClick={addToCart}
+                  // onClick={addToCart}
                   >Add to Cart</Button>
                 </CardActions>
+                {/* <h1> Current number in cart {cartItems}</h1> */}
               </>
                
 
