@@ -15,23 +15,21 @@ function Navbar() {
          style={{ background: '#EE6E73' }}
          >
         <Toolbar variant="dense">
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          <Link 
-          to="/products"> Products</Link>
-          </Typography>
-          <Link to="/Cart"> 
-          <Button color="inherit" 
-          style={{ background: '#FFFAFA' }}
-          
-          >
-          {/* <ShoppingCartIcon 
-          style={{ background: '#FFFAFA' }}
-
-
-          /> */}
-           Cart
-        </Button>
-        </Link>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <Link 
+                to="/products"> Products
+              </Link>
+              </Typography>
+              <Link to="/Cart"> 
+              <Button color="inherit" 
+                style={{ background: '#FFFAFA' }}              
+              >
+              {/* <ShoppingCartIcon 
+              style={{ background: '#FFFAFA' }}
+              /> */}
+              Cart
+            </Button>
+            </Link>
         </Toolbar>
       </AppBar>
 
