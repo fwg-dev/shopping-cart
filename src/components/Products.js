@@ -1,24 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Typography, Card, CardContent, CardActions, Button, CardMedia,    }from '@mui/material';
 import Product from './Product';
 import './styles/Products.css';
 
 function Products({products}) {
+  const [cartItems, setCartItems] = useState(0);
+
+  const addToCart = () => {
+    console.log("Button Clicked");
+
+  };
+
+
   return (
     <div>
-      {/* <p>Hello from Products</p>
-      <ul>
-      {products.map((product) => (
-        <li>
-        {product.name}
-        <img src={product.image} />
-        <p> Price</p>
-        </li>      
-      ))}
-      </ul> */}
-
-
-      <ul className="product-container">
+           <ul className="product-container">
       {products.map((product) => (
         <li>
           <Card sx={{ maxWidth: 345 }}>
@@ -41,7 +37,12 @@ function Products({products}) {
                 </CardContent>
                 <CardActions>
                   <Button variant="contained" color="success" size="small">{product.price}</Button>
-                  <Button variant="outlined" color="success" size="small">Add to Cart</Button>
+                  <Button 
+                  variant="outlined" 
+                  color="success" 
+                  size="small"
+                  onClick={addToCart}
+                  >Add to Cart</Button>
                 </CardActions>
               </>
                
