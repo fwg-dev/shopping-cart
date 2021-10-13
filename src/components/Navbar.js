@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import Cart from './Cart.js';
 import Products from './Products.js';
+import {connect} from 'react-redux';
+
+
+import { getNumbers } from '../actions/getAction';
 
 //imports from material ui 
 import {AppBar, Toolbar, IconButton,  Typography,Button} from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
-function Navbar() {
+function Navbar(props) {
+console.log(props)
+useEffect(() => {
+   getNumbers();
+
+}, [])
+
+
+
   return (
     <div className="navigation"> 
          <AppBar position="static"
@@ -29,6 +41,7 @@ function Navbar() {
               /> */}
               Cart
             </Button>
+            <span> {props.cartProps.cartNumbers} </span>
             </Link>
         </Toolbar>
       </AppBar>
@@ -37,4 +50,9 @@ function Navbar() {
   )
 }
 
-export default Navbar
+const mapStateToProps = state => ({
+  cartProps: state.cartState
+})
+export default connect( mapStateToProps, { getNumbers }) (Navbar)
+
+
