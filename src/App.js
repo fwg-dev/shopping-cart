@@ -38,16 +38,16 @@ function App() {
 
   return (
     <div className="App">
-    <Navbar />
-    <Switch >
-     <Route exact path ="/cart" >
-       <Cart/>
-     </Route>
+      <Navbar />
+      <Switch >
+      <Route exact path ="/cart" >
+        <Cart/>
+      </Route>
 
-    </Switch>
-      
-      {/* <h1>Welcome to the shopping cart</h1> */}
-      <Products products={products} />
+      </Switch>
+        
+        {/* <h1>Welcome to the shopping cart</h1> */}
+        <Products products={products} />
     </div>
   );
 }
